@@ -1,12 +1,44 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.wp-block-sfg-smart-faq-generator {
+	.smart-faq-generator-list {
+		margin: 2em 0;
+	}
 
-.wp-block-create-block-smart-faq-generator {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+	.smart-faq-generator-item {
+		margin-bottom: 1em;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		overflow: hidden;
+
+		&[open] {
+			.smart-faq-generator-question {
+				background-color: #f7f7f7;
+				border-bottom: 1px solid #ddd;
+			}
+		}
+	}
+
+	.smart-faq-generator-question {
+		padding: 1em;
+		cursor: pointer;
+		font-weight: 600;
+		background-color: #ffffff;
+		transition: background-color 0.2s ease;
+
+		&::-webkit-details-marker {
+			color: #666;
+		}
+
+		&:hover {
+			background-color: #f0f0f0;
+		}
+	}
+
+	.smart-faq-generator-answer {
+		padding: 1em;
+		background-color: #ffffff;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
 }

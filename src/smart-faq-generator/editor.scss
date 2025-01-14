@@ -1,9 +1,89 @@
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.wp-block-sfg-smart-faq-generator {
+	.sfg-controls {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 16px;
+	}
 
-.wp-block-create-block-smart-faq-generator {
-	border: 1px dotted #f00;
+	.sfg-faq-list {
+		margin: 0;
+	}
+
+	.sfg-faq-item {
+		margin-bottom: 12px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		overflow: hidden;
+
+		&[open] {
+			.sfg-faq-question {
+				background-color: #f7f7f7;
+				border-bottom: 1px solid #ddd;
+			}
+		}
+	}
+
+	.sfg-faq-question {
+		padding: 12px 16px;
+		cursor: pointer;
+		background: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		transition: background-color 0.2s ease;
+
+		&:hover {
+			background-color: #f0f0f0;
+		}
+
+		span[data-rich-text-placeholder],
+		.rich-text {
+			flex-grow: 1;
+			margin-right: 8px;
+			font-weight: 600;
+			min-height: 24px;
+		}
+
+		.sfg-delete-faq {
+			color: #757575;
+			padding: 0;
+			min-width: 24px;
+			height: 24px;
+
+			&:hover {
+				color: #cc1818;
+			}
+		}
+	}
+
+	.sfg-faq-answer {
+		padding: 16px;
+		background: #fff;
+
+		.rich-text {
+			min-height: 60px;
+		}
+	}
+
+	.components-placeholder {
+		min-height: 150px;
+		padding: 24px;
+
+		.components-placeholder__label {
+			margin-bottom: 16px;
+		}
+
+		.components-placeholder__instructions {
+			margin-bottom: 16px;
+		}
+	}
+
+	.components-notice {
+		margin: 0 0 16px;
+
+		&.is-error {
+			background-color: #fcf0f1;
+			border-left-color: #cc1818;
+		}
+	}
 }

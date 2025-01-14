@@ -1,12 +1,35 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "create-block/smart-faq-generator",
+	"name": "sfg/smart-faq-generator",
 	"version": "0.1.0",
 	"title": "Smart Faq Generator",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"icon": "format-status",
+	"description": "A smart FAQ generator block using Gemini AI.",
+	"attributes": {
+		"faqs": {
+			"type": "array",
+			"default": [],
+			"items": {
+				"type": "object",
+				"properties": {
+					"question": {
+						"type": "string",
+						"default": ""
+					},
+					"answer": {
+						"type": "string",
+						"default": ""
+					}
+				}
+			}
+		},
+		"isGenerating": {
+			"type": "boolean",
+			"default": false
+		}
+	},
 	"example": {},
 	"supports": {
 		"html": false

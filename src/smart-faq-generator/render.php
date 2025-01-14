@@ -1,8 +1,29 @@
 <?php
 /**
- * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
+ * Smart FAQ Generator render file.
+ *
+ * @package smart-faq-generator
  */
+
+$faqs = $attributes['faqs'] ?? array();
+
+if ( empty( $faqs ) ) {
+	return;
+}
+
 ?>
-<p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( 'Smart Faq Generator – hello from a dynamic block!', 'smart-faq-generator' ); ?>
-</p>
+
+<div <?php /** phpcs:ignore */ echo get_block_wrapper_attributes(); ?>>
+	<?php foreach ( $faqs as $index => $faq ) : ?>
+		<details class="smart-faq-generator-item">
+			<summary class="smart-faq-generator-question">
+				<?php echo esc_html( $faq['question'] ); ?>
+			</summary>
+			<div class="smart-faq-generator-answer">
+				<?php
+				echo wp_kses_post( $faq['answer'] );
+				?>
+			</div>
+		</details>
+	<?php endforeach; ?>
+</div>
