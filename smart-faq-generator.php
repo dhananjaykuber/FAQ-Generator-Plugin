@@ -14,6 +14,7 @@
  */
 
 use SmartFAQGenerator\Classes\Block;
+use SmartFAQGenerator\Classes\Rest;
 use SmartFAQGenerator\Classes\Settings;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,6 +27,8 @@ define( 'SMART_FAQ_GENERATOR_PLUGIN_DIR', untrailingslashit( plugin_dir_path( __
 
 require_once SMART_FAQ_GENERATOR_PLUGIN_DIR . '/classes/class-block.php';
 require_once SMART_FAQ_GENERATOR_PLUGIN_DIR . '/classes/class-settings.php';
+require_once SMART_FAQ_GENERATOR_PLUGIN_DIR . '/classes/class-rest.php';
 
 new Block();
 new Settings();
+new Rest();
