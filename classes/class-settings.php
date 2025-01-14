@@ -40,7 +40,23 @@ class Settings {
 			'smart_faq_generator_settings_section'
 		);
 
-		register_setting( 'general', 'smart_faq_generator_gemini_api_key', 'esc_attr' );
+		register_setting( 'general', 'smart_faq_generator_gemini_api_key', array( $this, 'sanitize_api_key' ) );
+	}
+
+
+	/**
+	 * Sanitize API key
+	 *
+	 * @param string $api_key API key.
+	 * @return string
+	 */
+	public function sanitize_api_key( $api_key ) {
+		// If the submitted API key contains 'xxxxx', prevent it from being saved.
+		if ( false !== strpos( $api_key, '****' ) ) {
+			return get_option( 'smart_faq_generator_gemini_api_key' );
+		}
+
+		return $api_key;
 	}
 
 	/**
