@@ -8,10 +8,10 @@ Smart FAQ Generator is a WordPress block that automatically generates relevant F
 
 ### Key Features
 
-* **AI-Powered FAQ Generation**: Automatically creates relevant FAQs based on your content using Gemini AI
-* **Easy Editing**: Simple interface to edit, add, or remove questions and answers
-* **Accordion Style Display**: Clean, responsive accordion interface for better user experience
-* **Fully Customizable**: Edit generated FAQs or create your own from scratch
+- **AI-Powered FAQ Generation**: Automatically creates relevant FAQs based on your content using Gemini AI
+- **Easy Editing**: Simple interface to edit, add, or remove questions and answers
+- **Accordion Style Display**: Clean, responsive accordion interface for better user experience
+- **Fully Customizable**: Edit generated FAQs or create your own from scratch
 
 ### How It Works
 
@@ -23,12 +23,12 @@ Smart FAQ Generator is a WordPress block that automatically generates relevant F
 
 ### Use Cases
 
-* Product pages
-* Service descriptions
-* Knowledge base articles
-* Educational content
-* Support documentation
-* General web content
+- Product pages
+- Service descriptions
+- Knowledge base articles
+- Educational content
+- Support documentation
+- General web content
 
 ### Installation
 
@@ -37,7 +37,7 @@ Smart FAQ Generator is a WordPress block that automatically generates relevant F
 3. Go to Settings -> General and add your Gemini API key
 4. Start using the Smart FAQ Generator block in your posts and pages
 
-### Important 
+### Important
 
 You need a Google Gemini API key to use the AI generation feature. You can get one from the Google AI Studio. The API key can be added in the WordPress Settings -> General page.
 
@@ -63,4 +63,4 @@ You need a Google Gemini API key to use the AI generation feature. You can get o
 
 ###
 
-- Made with ❤️ by [@dhananjaykuber] (https://github.com/dhananjaykuber)
+- Made with ❤️ by [@dhananjaykuber](https://github.com/dhananjaykuber)
